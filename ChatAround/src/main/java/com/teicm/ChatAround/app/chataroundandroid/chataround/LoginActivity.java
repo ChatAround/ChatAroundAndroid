@@ -43,7 +43,7 @@ public class LoginActivity extends Activity {
                 if (txt_username.getText().toString().trim().length() > 0) {
 
                     String username = txt_username.getText().toString().trim();
-                    user.setUsername(username);
+                    user.setUserName(username);
 
 
                 } else {
@@ -99,7 +99,7 @@ public class LoginActivity extends Activity {
 
             // Build jsonObject
             JSONObject jsonObject = new JSONObject();
-            jsonObject.accumulate("name", user.getUsername());
+            jsonObject.accumulate("name", user.getUserName());
 
             json = jsonObject.toString();
 

@@ -1,23 +1,35 @@
 package com.teicm.ChatAround.app.chataroundandroid.chataround;
 
-/**
- * Created by Hrystos on 09-Nov-15.
- */
-public class User {
+import com.activeandroid.Model;
+import com.activeandroid.annotation.Table;
+import com.activeandroid.annotation.Column;
 
-    private String username;
 
-    public User() {}
+@Table(name = "USER")
+public class User extends Model{
+    @Column(name = "user_name")
+    private String userName;
+    @Column(name = "latitude")
+    private Double latitude;
+    @Column(name = "longitude")
+    private Double longitude;
 
-    public User(String username) {
-        this.username = username;
+    public User() { super(); }
+
+    public User(String userName, Double latitude, Double longitude) {
+        super();
+
+        this.userName = userName;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
-    public String getUsername() {
-        return username;
-    }
+    public String getUserName() { return userName; }
+    public void setUserName(String userName) { this.userName = userName; }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    public Double getLatitude() { return latitude; }
+    public void setLatitude(Double latitude) { this.latitude = latitude; }
+
+    public Double getLongitude() { return longitude; }
+    public void setLongitude(Double longitude) { this.longitude = longitude; }
 }

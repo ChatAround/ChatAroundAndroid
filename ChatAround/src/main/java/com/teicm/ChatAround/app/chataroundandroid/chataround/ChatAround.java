@@ -10,7 +10,7 @@ public class ChatAround extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat_around);
+        setContentView(R.layout.login_screen);
     }
 
     @Override

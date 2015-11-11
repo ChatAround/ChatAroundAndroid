@@ -1,16 +1,45 @@
 package com.teicm.ChatAround.app.chataroundandroid.chataround;
 
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import com.teicm.ChatAround.app.chataroundandroid.chataround.gps.GpsService;
+
 
 public class ChatAround extends AppCompatActivity {
 
+
+    public TextView textLat;
+    public TextView textLong;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_around);
+        Intent intent = new Intent(this,GpsService.class);
+        startService(intent);
+
+        Location location=null;
+
+//        double plong = location.getLongitude();
+//        double plat = location.getLatitude();
+//
+//        textLat.setText(Double.toString(plat));
+//        textLong.setText(Double.toString(plong));
+//
+//        textLat = (TextView) findViewById(R.id.textLat);
+//        textLong = (TextView) findViewById(R.id.textLong);
+
     }
 
     @Override

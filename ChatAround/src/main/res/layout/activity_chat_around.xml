@@ -6,11 +6,47 @@
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context=".ChatAround">
+                tools:context=".ChatAround" android:id="@+id/app_name">
 
     <TextView
             android:text="@string/hello_world"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" android:id="@+id/textView2" android:layout_below="@+id/textLong"
+            android:layout_alignRight="@+id/textView4" android:layout_alignEnd="@+id/textView4"
+            android:layout_marginRight="42dp" android:layout_marginEnd="42dp"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello World, ChatArround"
+            android:layout_weight="0.10" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" android:layout_marginBottom="68dp" android:id="@+id/textView4"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Longitude"
+            android:id="@+id/textView"
+            android:layout_below="@+id/textView3" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" android:layout_marginTop="85dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textLong"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Latitude"
+            android:id="@+id/textView3"
+            android:layout_marginTop="46dp"
+            android:layout_below="@+id/textLong" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textLat"
+            android:layout_alignRight="@+id/textView" android:layout_alignEnd="@+id/textView"/>
 
 </RelativeLayout>
